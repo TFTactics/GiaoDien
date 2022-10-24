@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Utils.Extensions;
+using DevExpress.XtraEditors;
+using GiaoDien.FE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,15 +16,16 @@ namespace GiaoDien.UC
 {
     public partial class UCEmployees : DevExpress.XtraEditors.XtraUserControl
     {
+        Employee ep = new Employee();
         public UCEmployees()
         {
             InitializeComponent();
-
             gridControl.DataSource = GetDataSource();
         }
         void windowsUIButtonPanel_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
         {
             if (e.Button.Properties.Caption == "Print") gridControl.ShowRibbonPrintPreview();
+            if (e.Button.Properties.Caption == "New" || e.Button.Properties.Caption == "Edit") ep.ShowDialog();
         }
         public BindingList<Customer> GetDataSource()
         {
@@ -47,8 +50,19 @@ namespace GiaoDien.UC
                 ZipCode = "30339",
                 Phone = "(800) 595-3232"
             });
+            result.Add(new Customer()
+            {
+                ID = 2,
+                Name = "Electronics Depot",
+                Address = "2455 Paces Ferry Road NW",
+                City = "Atlanta",
+                State = "GA",
+                ZipCode = "30339",
+                Phone = "(800) 595-3232"
+            });
             return result;
         }
+
         public class Customer
         {
             [Key, Display(AutoGenerateField = false)]

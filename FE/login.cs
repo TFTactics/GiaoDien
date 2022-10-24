@@ -32,6 +32,7 @@ namespace GiaoDien.FE
                 this.Hide();
                 homePage hp = new homePage();
                 hp.ShowDialog();
+                this.Show();
             }
         }
     }

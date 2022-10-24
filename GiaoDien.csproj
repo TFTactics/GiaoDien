@@ -74,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BE\signUp.cs" />
+    <Compile Include="FE\Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FE\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="FE\homePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,12 +106,6 @@
     <Compile Include="UC\UCDashBoard.Designer.cs">
       <DependentUpon>UCDashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCSales.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UCSales.Designer.cs">
-      <DependentUpon>UCSales.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC\UCEmployees.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +124,15 @@
     <Compile Include="UC\UCProduct.Designer.cs">
       <DependentUpon>UCProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCSales.Designer.cs">
+      <DependentUpon>UCSales.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FE\Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FE\homePage.resx">
       <DependentUpon>homePage.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.WinExplorer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +18,7 @@ namespace GiaoDien.UC
         {
             InitializeComponent();
         }
-        private void tileBar_SelectedItemChanged(object sender, TileItemEventArgs e)
-        {
-            navigationFrame.SelectedPageIndex = tileBarGroupTables.Items.IndexOf(e.Item);
-        }
+
     }
+
 }

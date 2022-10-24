@@ -20,6 +20,7 @@ namespace GiaoDien.FE
         UCEmployees employee = new UCEmployees();
         UCProduct product = new UCProduct();
         UCSales sales = new UCSales();
+        EditEmployee ep = new EditEmployee();
         public homePage()
         {
             InitializeComponent();
@@ -33,10 +34,12 @@ namespace GiaoDien.FE
             pnlMain.Controls.Add(employee);
             pnlMain.Controls.Add(sales);
             pnlMain.Controls.Add(product);
+            pnlMain.Controls.Add(ep);
             dash.Dock = DockStyle.Fill;
             employee.Dock = DockStyle.Fill;
             sales.Dock = DockStyle.Fill;
             product.Dock = DockStyle.Fill;
+            ep.Dock = DockStyle.Fill;
         }
 
         private void btnDashBoard_Click(object sender, EventArgs e)

@@ -147,4 +147,5 @@ E:\Data\WebApp\GiaoDien\bin\Debug\ja\DevExpress.Xpo.v22.1.resources.dll
 E:\Data\WebApp\GiaoDien\obj\Debug\GiaoDien.UC.UCDashBoard.resources
 E:\Data\WebApp\GiaoDien\obj\Debug\GiaoDien.UC.UCEmployees.resources
 E:\Data\WebApp\GiaoDien\obj\Debug\GiaoDien.UC.EditEmployee.resources
+E:\Data\WebApp\GiaoDien\obj\Debug\GiaoDien.FE.Employee.resources
 E:\Data\WebApp\GiaoDien\obj\Debug\GiaoDien.UC.UCProduct.resources
