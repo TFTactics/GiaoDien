@@ -43,10 +43,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSignIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ceMANAGER.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceADMIN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,7 +75,7 @@
             // 
             // panelControl2
             // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl2.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("panelControl2.Appearance.BackColor")));
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.ceMANAGER);
@@ -97,7 +95,10 @@
             // 
             resources.ApplyResources(this.ceMANAGER, "ceMANAGER");
             this.ceMANAGER.Name = "ceMANAGER";
-            this.ceMANAGER.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            // 
+            // 
+            // 
+            this.ceMANAGER.Properties.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("ceMANAGER.Properties.Appearance.ForeColor")));
             this.ceMANAGER.Properties.Appearance.Options.UseForeColor = true;
             this.ceMANAGER.Properties.Caption = resources.GetString("ceMANAGER.Properties.Caption");
             // 
@@ -105,7 +106,10 @@
             // 
             resources.ApplyResources(this.ceADMIN, "ceADMIN");
             this.ceADMIN.Name = "ceADMIN";
-            this.ceADMIN.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            // 
+            // 
+            // 
+            this.ceADMIN.Properties.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("ceADMIN.Properties.Appearance.ForeColor")));
             this.ceADMIN.Properties.Appearance.Options.UseForeColor = true;
             this.ceADMIN.Properties.Caption = resources.GetString("ceADMIN.Properties.Caption");
             // 
@@ -120,7 +124,7 @@
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl3.Appearance.Font")));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelControl3.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl3.Appearance.ForeColor")));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
             resources.ApplyResources(this.labelControl3, "labelControl3");
@@ -129,7 +133,7 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl2.Appearance.Font")));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelControl2.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl2.Appearance.ForeColor")));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
             resources.ApplyResources(this.labelControl2, "labelControl2");
@@ -138,7 +142,7 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl1.Appearance.Font")));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelControl1.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl1.Appearance.ForeColor")));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
             resources.ApplyResources(this.labelControl1, "labelControl1");
@@ -186,8 +190,9 @@
             // 
             // login
             // 
-            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("login.Appearance.BackColor")));
             this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
@@ -201,12 +206,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.InactiveGlowColor = System.Drawing.Color.Black;
             this.Name = "login";
+            this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageSlider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ceMANAGER.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceADMIN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

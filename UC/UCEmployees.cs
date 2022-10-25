@@ -11,12 +11,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
+using GiaoDien.BE.BS_Layer;
 
 namespace GiaoDien.UC
 {
     public partial class UCEmployees : DevExpress.XtraEditors.XtraUserControl
     {
         Employee ep = new Employee();
+        string err;
         public UCEmployees()
         {
             InitializeComponent();
@@ -29,52 +33,57 @@ namespace GiaoDien.UC
         }
         public BindingList<Customer> GetDataSource()
         {
+            BLEmployee bLEmployee = new BLEmployee();
+            DataSet ds = new DataSet();
+            DataTable dtEmployee = new DataTable();
+
+            ds = bLEmployee.LoadEmployee(ref err);
+            dtEmployee = ds.Tables[0];
+
             BindingList<Customer> result = new BindingList<Customer>();
-            result.Add(new Customer()
+
+            string[] TempArr = new string[20];
+            int n = 0;
+
+            for (int i = 0; i < dtEmployee.Rows.Count; i++)
             {
-                ID = 1,
-                Name = "ACME",
-                Address = "2525 E El Segundo Blvd",
-                City = "El Segundo",
-                State = "CA",
-                ZipCode = "90245",
-                Phone = "(310) 536-0611"
-            });
-            result.Add(new Customer()
-            {
-                ID = 2,
-                Name = "Electronics Depot",
-                Address = "2455 Paces Ferry Road NW",
-                City = "Atlanta",
-                State = "GA",
-                ZipCode = "30339",
-                Phone = "(800) 595-3232"
-            });
-            result.Add(new Customer()
-            {
-                ID = 2,
-                Name = "Electronics Depot",
-                Address = "2455 Paces Ferry Road NW",
-                City = "Atlanta",
-                State = "GA",
-                ZipCode = "30339",
-                Phone = "(800) 595-3232"
-            });
+                for (int j = 0; j < dtEmployee.Columns.Count; j++)
+                {
+                    object o = dtEmployee.Rows[i].ItemArray[j];
+                    //if you want to get the string
+                    TempArr[n] = (string)(o = dtEmployee.Rows[i].ItemArray[j].ToString());
+                    n++;
+                }
+                result.Add(new Customer()
+                {
+                    MaNV = TempArr[0],
+                    HoTen = TempArr[1],
+                    DiaChi = TempArr[2],
+                    SDT = TempArr[3],
+                    NgayVaoLam = TempArr[4],
+                    SoNgayLam = TempArr[5],
+                    GioiTinh = TempArr[6],
+                    NgaySinh = TempArr[7],
+                    ChucVu = TempArr[8]
+                });
+                n = 0;
+            }
             return result;
         }
 
         public class Customer
         {
             [Key, Display(AutoGenerateField = false)]
-            public int ID { get; set; }
+            public string MaNV { get; set; }
             [Required]
-            public string Name { get; set; }
-            public string Address { get; set; }
-            public string City { get; set; }
-            public string State { get; set; }
-            [Display(Name = "Zip Code")]
-            public string ZipCode { get; set; }
-            public string Phone { get; set; }
+            public string HoTen { get; set; }
+            public string DiaChi { get; set; }
+            public string SDT { get; set; }
+            public string NgayVaoLam { get; set; }
+            public string SoNgayLam { get; set; }
+            public string GioiTinh { get; set; }
+            public string NgaySinh { get; set; }
+            public string ChucVu { get; set; }
         }
     }
 }

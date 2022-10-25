@@ -73,6 +73,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BE\BS Layer\BLEmployee.cs" />
+    <Compile Include="BE\BS Layer\BLSignIn.cs" />
+    <Compile Include="BE\DB Layer\DBMain.cs" />
     <Compile Include="BE\signUp.cs" />
     <Compile Include="FE\Employee.cs">
       <SubType>Form</SubType>
